@@ -20,7 +20,7 @@ const User = () => {
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-2xl font-bold mb-4">User Dashboard</h1>
+      <h1 className="text-4xl font-bold text-blue-600 mb-4">User Dashboard</h1>
 
       <div className="bg-white shadow rounded-lg p-6">
         <h2 className="text-lg font-semibold mb-4">Profile</h2>
@@ -62,32 +62,3 @@ const User = () => {
 };
 
 export default User;
-
-
-
-
-
-
-
-// import { motion } from 'framer-motion';
-
-// const User = () => (
-//   <motion.div
-//     className="p-6"
-//     initial={{ opacity: 0, y: 20 }}
-//     animate={{ opacity: 1, y: 0 }}
-//     transition={{ duration: 0.5 }}
-//   >
-//     <h1 className="text-4xl font-bold text-blue-600 mb-4">User Page</h1>
-//     <p className="text-lg text-gray-600">
-//       Users can view their personalized dashboards and manage their profiles.
-//     </p>
-//     <ul className="mt-4 list-disc list-inside">
-//       <li>Access personal data</li>
-//       <li>Manage profile settings</li>
-//       <li>Track activity and achievements</li>
-//     </ul>
-//   </motion.div>
-// );
-
-// export default User;

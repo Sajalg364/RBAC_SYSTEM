@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
-import api from "../api/api"; // Import the mock API
+import React, { useState, useEffect, useCallback } from "react";
+import api from "../api/api";
 
-const Organizer = () => {
+const OrganizerDashboard = () => {
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [roleFilter, setRoleFilter] = useState("All");
   const [statusFilter, setStatusFilter] = useState("All");
 
-  // Fetch users on component mount
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -18,7 +17,7 @@ const Organizer = () => {
     setFilteredUsers(data);
   };
 
-  const handleFilterChange = () => {
+  const handleFilterChange = useCallback(() => {
     let filtered = users;
 
     if (roleFilter !== "All") {
@@ -30,15 +29,15 @@ const Organizer = () => {
     }
 
     setFilteredUsers(filtered);
-  };
+  }, [users, roleFilter, statusFilter]);
 
   useEffect(() => {
     handleFilterChange();
-  }, [roleFilter, statusFilter]);
+  }, [handleFilterChange]);
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
-      <h1 className="text-2xl font-bold mb-4">Organizer Dashboard</h1>
+      <h1 className="text-4xl font-bold text-green-600 mb-4">Organizer Dashboard</h1>
 
       <div className="mb-4 flex gap-4">
         <div>
@@ -104,34 +103,4 @@ const Organizer = () => {
   );
 };
 
-export default Organizer;
-
-
-
-
-
-
-
-
-// import { motion } from 'framer-motion';
-
-// const Organizer = () => (
-//   <motion.div
-//     className="p-6"
-//     initial={{ opacity: 0, x: 20 }}
-//     animate={{ opacity: 1, x: 0 }}
-//     transition={{ duration: 0.5 }}
-//   >
-//     <h1 className="text-4xl font-bold text-green-600 mb-4">Organizer Page</h1>
-//     <p className="text-lg text-gray-600">
-//       Organizers are responsible for managing events and resources efficiently.
-//     </p>
-//     <ul className="mt-4 list-disc list-inside">
-//       <li>Schedule and manage events</li>
-//       <li>Coordinate resources and tasks</li>
-//       <li>Monitor event performance</li>
-//     </ul>
-//   </motion.div>
-// );
-
-// export default Organizer;
+export default OrganizerDashboard;
