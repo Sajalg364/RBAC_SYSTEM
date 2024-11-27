@@ -1,5 +1,8 @@
 # RBAC (Role-Based Access Control) Dashboard
 
+## Live Demo
+https://sajalg364.github.io/RBAC_SYSTEM/
+
 ## Overview
 This project implements a Role-Based Access Control (RBAC) system for a dashboard application. The system has four distinct roles with varying levels of access:
 
@@ -29,8 +32,60 @@ The dashboard is built using **React** and **TailwindCSS** for styling, with sta
 - Node.js (version >= 14)
 - npm or yarn
 
-### Steps
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/rbac-dashboard.git
-   cd rbac-dashboard
+## How to Install
+
+Follow these steps to set up and run the project locally:
+
+1.  **Clone the Repository:**
+
+     ```bash
+     git clone https://github.com/sajalg364/RBAC_SYSTEM.git
+     cd RBAC_SYSTEM
+
+2.  **Install Dependencies:**
+
+    ```bash
+    cd frontend
+    npm install
+    ```
+3.  **Run the Application:**
+
+    ```bash
+    npm run start
+    ```
+
+5.  **Open in Your Browser:**
+
+Open `http://localhost:3000` in your web browser.
+
+## Project Structure
+
+       ├── public
+       ├── src
+       │   ├── api
+       │   ├── components
+       │   ├── context
+       │   ├── pages
+       │   ├── routes
+       │   ├── App.css
+       │   ├── App.js
+       │   ├── main.jsx
+       │   └── index.css
+       ├── index.html
+       ├── tailwind.config.js
+       └── package.json
+      ── README.md
+
+## Author
+
+Sajal Mahajan \
+Email: contact.sajalmahajan364@gmail.com \
+LinkedIn : https://www.linkedin.com/in/sajal-mahajan-a58b9524a/ \
+Deployed Live Link : https://sajalg364.github.io/RBAC_SYSTEM/
+
+## Thank You
+
+Thank you for exploring RBAC! Your feedback is valuable. If you have any suggestions or thoughts, feel free to share them with us. 😊
+
+---
+   
