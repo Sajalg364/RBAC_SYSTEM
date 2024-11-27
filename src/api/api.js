@@ -43,7 +43,7 @@ const users = [
   
   // Mock data for roles
   const roles = [
-    { role_id: "1", role_name: "Super Admin", hierarchy: 1 },
+    { role_id: "1", role_name: "Super_Admin", hierarchy: 1 },
     { role_id: "2", role_name: "Admin", hierarchy: 2 },
     { role_id: "3", role_name: "Organizer", hierarchy: 3 },
     { role_id: "4", role_name: "User", hierarchy: 4 },

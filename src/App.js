@@ -3,6 +3,7 @@ import { RoleProvider } from './context/RoleContext';
 import Sidebar from './components/Sidebar';
 import DarkModeToggle from './components/DarkModeToggle';
 import ProtectedRoute from './routes/ProtectedRoute';
+import { Navigate } from 'react-router-dom';
 
 import Dashboard from './pages/Dashboard';
 import Admin from './pages/Admin';
@@ -23,6 +24,7 @@ const App = () => {
             <div className="flex-1">
               <Routes>
                 <Route path="/" element={<ProtectedRoute page="dashboard"><Dashboard /></ProtectedRoute>} />
+                <Route path="/RBAC_SYSTEM" element={<Navigate to="/" />} />
                 <Route path="/admin" element={<ProtectedRoute page="admin"><Admin /></ProtectedRoute>} />
                 <Route path="/organizer" element={<ProtectedRoute page="organizer"><Organizer /></ProtectedRoute>} />
                 <Route path="/user" element={<ProtectedRoute page="user"><User /></ProtectedRoute>} />
