@@ -33,20 +33,6 @@ const App = () => {
             <DarkModeToggle />
           </div>
         </div>
-      {/* <div className="flex">
-        <Sidebar />
-        <div className="flex-1">
-          <Routes>
-            <Route path="/" element={<ProtectedRoute page="dashboard"><Dashboard /></ProtectedRoute>} />
-            <Route path="/admin" element={<ProtectedRoute page="admin"><Admin /></ProtectedRoute>} />
-            <Route path="/organizer" element={<ProtectedRoute page="organizer"><Organizer /></ProtectedRoute>} />
-            <Route path="/user" element={<ProtectedRoute page="user"><User /></ProtectedRoute>} />
-            <Route path="/setting" element={<ProtectedRoute page="setting"><Settings /></ProtectedRoute>} />
-            <Route path="/unauthorized" element={<Unauthorized />} />
-          </Routes>
-        </div>
-        <DarkModeToggle />
-      </div> */}
     </Router>
   </RoleProvider>
 )};

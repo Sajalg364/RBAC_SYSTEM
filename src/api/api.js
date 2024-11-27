@@ -1,17 +1,40 @@
-// Mock data for users
 const users = [
     {
       user_id: "12345",
-      name: "John Doe",
-      email: "john.doe@example.com",
+      name: "Virat Kohli",
+      email: "vk18.k@example.com",
+      role: "Super Admin",
+      status: "Active",
+      permissions: { read: true, write: true, delete: true },
+    },
+    {
+      user_id: "67890",
+      name: "Rohit Sharma",
+      email: "rs19.s@example.com",
       role: "Admin",
       status: "Active",
       permissions: { read: true, write: true, delete: false },
     },
     {
-      user_id: "67890",
-      name: "Jane Smith",
-      email: "jane.smith@example.com",
+      user_id: "12346",
+      name: "Hardik Pandya",
+      email: "hk20.p@example.com",
+      role: "User",
+      status: "Inactive",
+      permissions: { read: true, write: false, delete: false },
+    },
+    {
+      user_id: "12347",
+      name: "Ronaldo",
+      email: "rr21.r@example.com",
+      role: "User",
+      status: "Active",
+      permissions: { read: true, write: false, delete: false },
+    },
+    {
+      user_id: "12348",
+      name: "Messi",
+      email: "mm22.m@example.com",
       role: "User",
       status: "Inactive",
       permissions: { read: true, write: false, delete: false },
@@ -30,12 +53,12 @@ const users = [
   const api = {
     getUsers: () =>
       new Promise((resolve) => {
-        setTimeout(() => resolve([...users]), 500); // Return a copy to avoid direct mutation
+        setTimeout(() => resolve([...users]), 500); 
       }),
   
     getRoles: () =>
       new Promise((resolve) => {
-        setTimeout(() => resolve([...roles]), 500); // Return a copy to avoid direct mutation
+        setTimeout(() => resolve([...roles]), 500); 
       }),
   
     updatePermissions: (userId, permissions) =>

@@ -6,7 +6,7 @@ const User = () => {
 
   const fetchCurrentUser = async () => {
     const data = await api.getUsers();
-    const currentUser = data.find((u) => u.email === "john.doe@example.com"); 
+    const currentUser = data.find((u) => u.email === "vk18.k@example.com"); 
     setUser(currentUser);
   };
 
