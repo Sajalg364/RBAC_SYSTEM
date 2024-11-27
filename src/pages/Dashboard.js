@@ -88,7 +88,7 @@ const Dashboard = () => {
                   >
                     {user.status}
                   </span>
-                  <button
+                  {/* <button
                     className="text-blue-500 underline text-sm"
                     onClick={(e) => {
                       e.stopPropagation();
@@ -96,7 +96,16 @@ const Dashboard = () => {
                     }}
                   >
                     Toggle Status
-                  </button>
+                  </button> */}
+                  <button
+                      className="bg-blue-500 text-xs text-white  px-2 py-1 rounded hover:bg-blue-600"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleStatusToggle(user);
+                      }}
+                    >
+                      Toggle Status
+                    </button>
                 </div>
               </li>
             ))}
